@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>CineMatch | Подбор фильмов и сериалов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">🎬 Cine<span>Match</span></div>
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="🔍 Поиск фильмов и сериалов...">
+            </div>
+            <div class="tabs">
+                <button class="tab-btn" data-tab="movies">Фильмы</button>
+                <button class="tab-btn" data-tab="series">Сериалы</button>
+                <button class="tab-btn" data-tab="shows">Шоу</button>
+                <button class="tab-btn" data-tab="recommended">Рекомендовано</button>
+                <button class="tab-btn" data-tab="favorites">Мои любимые</button>
+                <button class="tab-btn" data-tab="watched">Просмотрено</button>
+                <button class="tab-btn" onclick="window.location.href='about.html'">О нас</button>
+                <button class="tab-btn" onclick="window.location.href='services.html'">Услуги</button>
+                <button class="tab-btn" onclick="window.location.href='contact.html'">Контакты</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="tab-content">
+        <div class="tab-pane" id="movies">
+            <div class="genres-wrapper" id="movies-genres-wrapper">
+                <div class="genres" id="movies-genres">
+                    <button class="genre-btn active-genre" data-genre="all">Все</button>
+                    <button class="genre-btn" data-genre="horror">Ужастики</button>
+                    <button class="genre-btn" data-genre="thriller">Триллеры</button>
+                    <button class="genre-btn" data-genre="comedy">Комедии</button>
+                    <button class="genre-btn" data-genre="drama">Драмы</button>
+                    <button class="genre-btn" data-genre="detective">Детективы</button>
+                    <button class="genre-btn" data-genre="crime">Криминал</button>
+                    <button class="genre-btn" data-genre="fantasy">Фэнтези</button>
+                    <button class="genre-btn" data-genre="adventure">Приключения</button>
+                </div>
+            </div>
+            <div class="movies-grid" id="movies-grid"></div>
+        </div>
+
+        <div class="tab-pane" id="series">
+            <div class="genres-wrapper" id="series-genres-wrapper">
+                <div class="genres" id="series-genres">
+                    <button class="genre-btn active-genre" data-genre="all">Все</button>
+                    <button class="genre-btn" data-genre="horror">Ужастики</button>
+                    <button class="genre-btn" data-genre="thriller">Триллеры</button>
+                    <button class="genre-btn" data-genre="comedy">Комедии</button>
+                    <button class="genre-btn" data-genre="drama">Драмы</button>
+                    <button class="genre-btn" data-genre="detective">Детективы</button>
+                    <button class="genre-btn" data-genre="crime">Криминал</button>
+                    <button class="genre-btn" data-genre="fantasy">Фэнтези</button>
+                    <button class="genre-btn" data-genre="adventure">Приключения</button>
+                </div>
+            </div>
+            <div class="movies-grid" id="series-grid"></div>
+        </div>
+
+        <div class="tab-pane" id="shows">
+            <div class="page-placeholder">
+                <h2>ШОУ И ПЕРЕДАЧИ</h2>
+                <p>Здесь будут ваши любимые шоу и передачи</p>
+                <button class="placeholder-btn" onclick="window.location.href='shows.html'">Перейти к шоу →</button>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="recommended">
+            <div class="page-placeholder">
+                <h2>РЕКОМЕНДОВАНО ДЛЯ ВАС</h2>
+                <p>Фильмы и сериалы, подобранные на основе ваших предпочтений</p>
+                <div class="movies-grid" id="recommended-grid"></div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="favorites">
+            <div class="page-placeholder">
+                <h2>МОИ ЛЮБИМЫЕ</h2>
+                <p>Фильмы и сериалы, которые вам понравились, появятся здесь</p>
+                <div class="movies-grid" id="favorites-grid"></div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="watched">
+            <div class="page-placeholder">
+                <h2>ПРОСМОТРЕНО</h2>
+                <p>Здесь будут фильмы и сериалы, которые вы уже посмотрели</p>
+                <div class="movies-grid" id="watched-grid"></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle"></h2>
+                <button class="modal-close" id="modalCloseBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-poster" id="modalPoster"></div>
+                <div id="modalDetails"></div>
+                <div class="cast-section" id="modalCast"></div>
+                <div class="modal-description" id="modalDescription"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

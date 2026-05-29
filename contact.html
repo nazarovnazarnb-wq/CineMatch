@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Контакты | CineMatch</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav-tabs { display: flex; gap: 15px; justify-content: center; margin-bottom: 30px; }
+        .nav-tab { background: #1a1a1a; border: none; padding: 12px 24px; border-radius: 30px; color: white; cursor: pointer; transition: 0.3s; }
+        .nav-tab.active { background: #ff3366; }
+        .nav-tab:hover { background: #333; }
+        .contact-container { max-width: 600px; margin: 0 auto; text-align: center; }
+        .contact-info { margin-top: 30px; }
+        .contact-info p { margin: 15px 0; font-size: 1.1em; }
+        .social-link { color: #ff3366; text-decoration: none; }
+        .social-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">🎬 Cine<span>Match</span></div>
+            <div class="nav-tabs">
+                <button class="nav-tab" onclick="window.location.href='index.html'">Главная</button>
+                <button class="nav-tab" onclick="window.location.href='about.html'">О нас</button>
+                <button class="nav-tab" onclick="window.location.href='services.html'">Услуги</button>
+                <button class="nav-tab active">Контакты</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="contact-container">
+            <h2>Свяжитесь с нами</h2>
+            <div class="contact-info">
+                <p>📧 Email: <a href="mailto:cinematch@example.com" class="social-link">cinematch@example.com</a></p>
+                <p>📱 Telegram: <a href="#" class="social-link">@cinematch_support</a></p>
+                <p>📞 Телефон: +7 (999) 123-45-67</p>
+                <p>📍 Адрес: г. Москва, ул. Кино, д. 1</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

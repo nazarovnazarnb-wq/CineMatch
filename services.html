@@ -1,0 +1,45 @@
+<!-- services.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Услуги | CineMatch</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav-tabs { display: flex; gap: 15px; justify-content: center; margin-bottom: 30px; }
+        .nav-tab { background: #1a1a1a; border: none; padding: 12px 24px; border-radius: 30px; color: white; cursor: pointer; transition: 0.3s; }
+        .nav-tab.active { background: #ff3366; }
+        .nav-tab:hover { background: #333; }
+        .page-content { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .service-card { background: #111; padding: 25px; border-radius: 15px; text-align: center; }
+        .service-card h3 { color: #ff3366; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">🎬 Cine<span>Match</span></div>
+            <div class="nav-tabs">
+                <button class="nav-tab" onclick="window.location.href='index.html'">Главная</button>
+                <button class="nav-tab" onclick="window.location.href='about.html'">О нас</button>
+                <button class="nav-tab active">Услуги</button>
+                <button class="nav-tab" onclick="window.location.href='contact.html'">Контакты</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page-content">
+            <h2 style="text-align: center; margin-bottom: 20px;">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card"><h3>🎬 Подбор фильмов</h3><p>Индивидуальные рекомендации на основе ваших предпочтений</p></div>
+                <div class="service-card"><h3>📺 Трекер просмотров</h3><p>Отмечайте просмотренное и получайте персональные подборки</p></div>
+                <div class="service-card"><h3>⭐ Рейтинги и отзывы</h3><p>Оценивайте фильмы и делитесь мнением</p></div>
+                <div class="service-card"><h3>🎯 Персонализация</h3><p>Настройте жанры и получайте идеальные рекомендации</p></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
